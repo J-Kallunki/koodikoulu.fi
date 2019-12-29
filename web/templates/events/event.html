@@ -1,5 +1,5 @@
 <div class="panel panel-event {{ event.category }} {% if event.booked %}booked{% endif %}">
-  <div class="panel-heading" role="tab" id="headingOne">
+  <div class="panel-heading" role="tab" id="headingOne-{{ event.pk }}">
     <div class="panel-title row-container">
       <a role="button" data-toggle="collapse" data-parent="#accordion" href="#id-{{ event.pk }}" aria-expanded="true"
          aria-controls="collapseOne">
@@ -21,7 +21,7 @@
       </a>
     </div>
   </div>
-  <div id="id-{{ event.pk }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+  <div id="id-{{ event.pk }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne-{{ event.pk }}">
     <div class="panel-body">
       <div class="text-content">
         <div class="info col-xs-12 col-md-7">
