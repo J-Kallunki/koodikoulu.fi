@@ -52,8 +52,8 @@
         </div>
       </div>
     </div>
-    <div class="panel-group event-list" id="accordion" role="tablist" aria-multiselectable="true">
       {% if events %}
+        <div class="panel-group event-list" id="accordion" role="tablist" aria-multiselectable="true">
           <div class="panel panel-head">
             <div class="panel-heading" role="tab" id="heading">
               <div class="panel-title row-container heading-row">
@@ -78,10 +78,12 @@
           {% for event in events %}
             {% include 'events/event.html' %}
           {% endfor %}
+        </div>
       {% else %}
-        <p class="muted text-center">Ei tulevia tapahtumia juuri nyt.</p>
+        <div class="panel-group event-list" id="accordion">
+          <p class="muted text-center">Ei tulevia tapahtumia juuri nyt.</p>
+        </div>
       {% endif %}
-    </div>
     <p class="text-center">Psst... Tarvitsemme lisää ohjaajia – <a href="/organize">järjestä oma Koodikoulun ensiaskeleet tai iltis</a>
     </p>
     {% if old_events %}
